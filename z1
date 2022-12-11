@@ -1,0 +1,11 @@
+# 1. Напишите программу, удаляющую из текста все слова, содержащие ""абв"".
+
+deltext = 'Напишите абв напиабв програбвмму программу, удаляющую из \
+    этого абв текста все вабвс слова, содерабващие содержащие "абв"'
+
+def del_some_words(deltext):
+    deltext = list(filter(lambda x: 'абв' not in x, deltext.split()))
+    return " ".join(deltext)
+
+deltext = del_some_words(deltext)
+print(deltext)
